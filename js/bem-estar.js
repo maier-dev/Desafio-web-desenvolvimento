@@ -2,12 +2,12 @@
 const inputPesoIMC = document.getElementById('peso');
 const inputPesoAgua = document.getElementById('peso-agua');
 
-// Quando digitar no peso do IMC, atualiza o da Água
+// Quando digitar no peso do IMC, atualiza o da água
 inputPesoIMC.addEventListener('input', () => {
     inputPesoAgua.value = inputPesoIMC.value;
 });
 
-// Quando digitar no peso da Água, atualiza o do IMC
+// Quando digitar no peso da água, atualiza o do IMC
 inputPesoAgua.addEventListener('input', () => {
     inputPesoIMC.value = inputPesoAgua.value;
 });
