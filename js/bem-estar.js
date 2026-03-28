@@ -1,3 +1,17 @@
+// Sincronização entre os campos
+const inputPesoIMC = document.getElementById('peso');
+const inputPesoAgua = document.getElementById('peso-agua');
+
+// Quando digitar no peso do IMC, atualiza o da Água
+inputPesoIMC.addEventListener('input', () => {
+    inputPesoAgua.value = inputPesoIMC.value;
+});
+
+// Quando digitar no peso da Água, atualiza o do IMC
+inputPesoAgua.addEventListener('input', () => {
+    inputPesoIMC.value = inputPesoAgua.value;
+});
+
 function calcularIMC() {
     // Busca os valores digitados nos inputs e converte para números decimais
     const peso = parseFloat(document.getElementById('peso').value);
