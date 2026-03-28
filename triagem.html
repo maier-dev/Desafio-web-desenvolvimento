@@ -1,0 +1,79 @@
+ <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triagem Digital | Saúde & Vínculo</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <nav class="container">
+            <div class="logo">
+                <img src="../img/logo.png" width="60" alt="Logo Saúde Vínculo">
+                <span>Saúde & Vínculo</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="triagem.html" class="active">Triagem Digital</a></li>
+                <li><a href="bem-estar.html">Meu Bem-Estar</a></li>
+                <li><a href="agendamento.html">Agendamento</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="triagem-section">
+            <div class="instruction-box">
+                <h2>Assistente de Triagem</h2>
+                <p>Responda às perguntas abaixo para que possamos entender melhor como ajudar você hoje.</p>
+            </div>
+
+            <div class="card triagem-card">
+                <form id="triagem-form">
+                    <div class="question">
+                        <label for="name">Como podemos te chamar?</label>
+                        <input type="text" id="user-name" placeholder="Digite seu nome" required>
+                    </div>
+
+                    <div class="question">
+                        <label>O que você está buscando hoje?</label>
+                        <select id="main-reason" required>
+                            <option value="">Selecione uma opção...</option>
+                            <option value="sintomas">Estou com sintomas físicos (dor, febre, etc)</option>
+                            <option value="rotina">Exames de rotina ou check-up</option>
+                            <option value="emocional">Apoio emocional ou saúde mental</option>
+                            <option value="orientacao">Orientação sobre hábitos saudáveis</option>
+                        </select>
+                    </div>
+
+                    <div class="question">
+                        <label>Qual a urgência do seu desconforto?</label>
+                        <div class="radio-group">
+                            <input type="radio" name="urgency" value="leve" id="leve" checked> <label for="leve">Leve</label>
+                            <input type="radio" name="urgency" value="moderada" id="moderada"> <label for="moderada">Moderada</label>
+                            <input type="radio" name="urgency" value="alta" id="alta"> <label for="alta">Alta</label>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-primary" style="width: 100%; border: none; cursor: pointer;">Analisar Perfil</button>
+                </form>
+
+                <div id="result-area" class="result-box hidden">
+                    <hr>
+                    <h3 id="result-title"></h3>
+                    <p id="result-text"></p>
+                    <a href="agendamento.html" class="btn-secondary" style="display: inline-block; margin-top: 15px;">Ir para Agendamento</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Atividade Acadêmica - Cuidado em Saúde. Desenvolvido por Celina Maier & Gabriel Pereira Brasil.</p>
+    </footer>
+
+    <script src="js/triagem.js"></script>
+</body>
+</html>

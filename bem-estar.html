@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Bem-Estar | Saúde & Vínculo</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">
+                <img src="../img/logo.png" width="60" alt="Logo">
+                <span>Saúde & Vínculo</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="triagem.html">Triagem Digital</a></li>
+                <li><a href="bem-estar.html" class="active">Meu Bem-Estar</a></li>
+                <li><a href="agendamento.html">Agendamento</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="bem-estar-section"> <div class="instruction-box">
+                <h2>Painel de Autocuidado</h2>
+                <p>Entenda seus números para fortalecer o vínculo com sua saúde integral.</p>
+            </div>
+
+            <div class="calculadoras-grid">
+                <div class="card triagem-card">
+                    <h3 style="color: #1E3A8A;">Índice de Massa Corporal (IMC)</h3>
+                    <p style="text-align: center; font-size: 0.9em; color: #64748b; margin-bottom: 20px;">
+                        O IMC ajuda a identificar se seu peso está em uma faixa saudável.
+                    </p>
+                    
+                    <div class="question">
+                        <label for="peso">Peso (kg)</label>
+                        <input type="number" id="peso" placeholder="Ex: 75.5" step="0.1">
+                    </div>
+                    <div class="question">
+                        <label for="altura">Altura (m)</label>
+                        <input type="number" id="altura" placeholder="Ex: 1.75" step="0.01">
+                    </div>
+                    
+                    <button onclick="calcularIMC()" class="btn-primary" style="width:100%; border:none; cursor:pointer;">Analisar IMC</button>
+                    <div id="res-imc" class="result-box hidden"></div>
+                </div>
+
+                <div class="card triagem-card">
+                    <h3 style="color: #1E3A8A;">Meta de Hidratação</h3>
+                    <p style="text-align: center; font-size: 0.9em; color: #64748b; margin-bottom: 20px;">
+                        O cálculo considera que cada corpo possui uma necessidade única de água.
+                    </p>
+                    
+                    <div class="question">
+                        <label for="peso-agua">Seu Peso Atual (kg)</label>
+                        <input type="number" id="peso-agua" placeholder="Ex: 70">
+                    </div>
+
+                    <button onclick="calcularAgua()" class="btn-secondary" style="width:100%; cursor:pointer;">Calcular Litros/Dia</button>
+                    <div id="res-agua" class="result-box hidden"></div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Atividade Acadêmica - Cuidado em Saúde. Desenvolvido por Celina Maier & Gabriel Pereira Brasil.</p>
+    </footer>
+
+    <script src="js/bem-estar.js"></script>
+</body>
+</html>
